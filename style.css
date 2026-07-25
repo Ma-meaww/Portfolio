@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
@@ -7,35 +7,192 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
 :root {
-  --background : #151e31;
-  --card: #1d2a44;
-  --text: #F8FAFC;
-  --secondary-text: #94A3B8;
-  --primary: #38BDF8;
+  --background: #0c121e;
+  --card: #0f1622;
+  --text: #f8fafc;
+  --secondary-text: #94a3b8;
+  --primary: #2472eb;
 }
 
 nav {
-  background-color: var(--background);
-  padding: 20px 45px;
+  width: 100%;
+  background: #080e19;
+  padding: 20px;
+  padding-left: 40px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
-  h3 {
-    color: var(--primary);
-  }
+  gap: 20px;
+}
+
+nav h3 {
+  color: var(--primary);
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   align-items: center;
 }
 
 .nav-links a {
   color: var(--text);
   text-decoration: none;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 850px) {
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 70%;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+.hero {
+  min-height: calc(100vh - 70px);
+  padding: 50px 6%;
+
+  display: flex;
+  align-items: flex-start;
+  background-color: #0b111d;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-greeting {
+  color: var(--secondary-text);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.hero-name {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 5px;
+
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-role {
+  color: var(--text);
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  color: var(--secondary-text);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.hero-image {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 60%;
+  max-width: 600px;
+  height: auto;
+}
+
+.view-projects-btn,
+.download-resume-btn {
+  min-width: 160px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-projects-btn {
+  color: var(--text);
+  background-color: var(--primary);
+}
+
+.download-resume-btn {
+  color: var(--text);
+  border: 1px solid var(--secondary-text);
+}
+
+.download-resume-btn i {
+  font-size: 15px;
+}
+
+.github-link {
+  width: fit-content;
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--secondary-text);
   font-size: 14px;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.github-link img {
+  width: 20px;
+  height: 20px;
+}
+
+.github-link:hover {
+  color: var(--primary);
 }

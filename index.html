@@ -6,27 +6,63 @@
     <title>Kulthira Portfolio</title>
 
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
     <nav>
       <h3>Kulthira</h3>
       <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Skills</a>
-        <a href="#">Projects</a>
-        <a href="#">Education</a>
-        <a href="#">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
 
     <main>
-      <section>
-        <p>
-          Hi, I’m Kulthira Computer Science Student & Aspiring Software
-          Developer I enjoy building practical web, AI, and automation
-          applications.
-        </p>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-name">Kulthira</h1>
+          <h2 class="hero-role">
+            Computer Science Student & <br />
+            Aspiring Software Developer
+          </h2>
+          <p class="hero-description">
+            I enjoy building practical web, AI, and automation applications.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="view-projects-btn"
+              >View My Projects&nbsp; →</a
+            >
+            <a href="resume.pdf" class="download-resume-btn" download>
+              Download Resume&nbsp;
+              <i class="material-icons">download</i>
+            </a>
+          </div>
+          <a
+            href="https://github.com/Ma-meaww"
+            class="github-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="images/github-icon.svg" alt="" />
+            <span>GitHub</span>
+            <span aria-hidden="true">↗</span></a
+          >
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="images/hero-image.png"
+            alt="Laptop displaying programming code"
+          />
+        </div>
       </section>
     </main>
   </body>
