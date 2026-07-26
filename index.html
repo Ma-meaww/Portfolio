@@ -11,17 +11,24 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
   </head>
   <body>
-    <nav>
-      <h3>Kulthira</h3>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <h2 class="logo">Kulthira</h2>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </nav>
 
@@ -64,6 +71,171 @@
           />
         </div>
       </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title"><span></span>About Me</h2>
+          <div class="about-content">
+            <div class="about-image">
+              <img src="images/profile.png" alt="Kulthira profile" />
+            </div>
+
+            <div class="about-description">
+              <p>
+                I'm a Computer Science student interested in web development, AI
+                applications, and automation. I enjoy turning ideas into
+                practical projects and learning how different parts of a system
+                work together.
+              </p>
+              <p>
+                I'm currently looking for opportunities to improve my skills
+                through real-world development experience.
+              </p>
+            </div>
+            <div class="about-details">
+              <div class="about-detail-item">
+                <i class="material-icons">location_on</i>
+                <span>Based in Pathum Thani, Thailand</span>
+              </div>
+
+              <div class="about-detail-item">
+                <i class="material-icons">school</i>
+                <span>Computer Science Student</span>
+              </div>
+
+              <div class="about-detail-item">
+                <i class="material-icons">favorite_border</i>
+                <span>Interested in Web, AI and Automation</span>
+              </div>
+
+              <div class="about-detail-item">
+                <i class="material-icons">work_outline</i>
+                <span>Open to Internship Opportunities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills">
+        <div class="container">
+          <h2 class="section-title">
+            <span></span>
+            Skills
+          </h2>
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="skill-card-title">
+                <i class="material-icons">desktop_windows</i>
+                <h3>Frontend</h3>
+              </div>
+              <div class="skills-tags">
+                <span>React</span>
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Flutter</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-title">
+                <i class="material-icons">storage</i>
+                <h3>Backend</h3>
+              </div>
+              <div class="skills-tags">
+                <span>Node.js</span>
+                <span>ExpressJS</span>
+                <span>Python</span>
+                <span>REST API</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-title">
+                <i class="material-symbols-outlined">database</i>
+                <h3>Database</h3>
+              </div>
+              <div class="skills-tags">
+                <span>MongoDB</span>
+                <span>MySQL</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-title">
+                <i class="material-symbols-outlined">neurology</i>
+                <h3>AI &amp; Tools</h3>
+              </div>
+              <div class="skills-tags">
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>MediaPipe</span>
+                <span>Face Recognition</span>
+                <span>PyAutoGUI</span>
+                <span>Groq API</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title">
+            <span></span>
+            Featured Projects
+          </h2>
+        </div>
+      </section>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <!-- Project 1 -->
+          <div class="project-gallery">
+            <img src="images/project1-page1.png" alt="Project 1 dashboard" />
+            <img src="images/project1-page2.png" alt="Project 1 second page" />
+            <img src="images/project1-page3.png" alt="Project 1 third page" />
+          </div>
+          <div class="project-content">
+            <h3>Touchless Computer Control System</h3>
+
+            <p>
+              Control a computer using hand gestures detected through a
+              smartphone camera.
+            </p>
+
+            <div class="project-tags">
+              <span>Flutter</span>
+              <span>Python</span>
+              <span>MediaPipe</span>
+              <span>PyAutoGUI</span>
+            </div>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/Ma-meaww/project-one"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <!-- Project 2 -->
+        </article>
+
+        <article class="project-card">
+          <!-- Project 3 -->
+        </article>
+        <article class="project-card">
+          <!-- Project 4 -->
+        </article>
+      </div>
     </main>
   </body>
 </html>
