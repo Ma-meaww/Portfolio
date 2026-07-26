@@ -187,55 +187,206 @@
             <span></span>
             Featured Projects
           </h2>
+
+          <div class="projects-carousel">
+            <button
+              class="carousel-button previous-button"
+              type="button"
+              aria-label="Previous project"
+            >
+              <i class="material-icons">chevron_left</i>
+            </button>
+
+            <div class="projects-viewport">
+              <div class="projects-track">
+                <!-- Project 1 -->
+                <article class="project-card project-slide">
+                  <div class="project-image">
+                    <img
+                      src="images/gesture-control-1.png"
+                      alt="Touchless Computer Control System"
+                    />
+                  </div>
+
+                  <div class="project-content">
+                    <h3>Touchless Computer Control System</h3>
+
+                    <p>
+                      A Flutter and Python system that detects hand gestures and
+                      sends real-time WebSocket commands for cursor movement,
+                      clicking, scrolling, voice input, and browser actions.
+                    </p>
+
+                    <div class="project-tags">
+                      <span>Flutter</span>
+                      <span>Dart</span>
+                      <span>Python</span>
+                      <span>MediaPipe</span>
+                      <span>WebSocket</span>
+                      <span>PyAutoGUI</span>
+                      <span>Selenium</span>
+                    </div>
+
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/Ma-meaww/hand-gesture-frontend"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Mobile App ↗
+                      </a>
+
+                      <a
+                        href="https://github.com/Ma-meaww/hand-gesture-pc-controller"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        PC Controller ↗
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card project-slide">
+                  <div class="project-image">
+                    <img
+                      src="images/attendance-1.png"
+                      alt="Attendance Management System"
+                    />
+                  </div>
+
+                  <div class="project-content">
+                    <h3>Attendance Management System</h3>
+
+                    <p>
+                      A role-based attendance system with face recognition,
+                      check-in and check-out, leave management, and reporting
+                      for Admin, Supervisor, and Employee roles.
+                    </p>
+
+                    <div class="project-tags">
+                      <span>React</span>
+                      <span>TypeScript</span>
+                      <span>Node.js</span>
+                      <span>Express.js</span>
+                      <span>MySQL</span>
+                      <span>Python</span>
+                    </div>
+
+                    <div class="project-links">
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        Frontend GitHub ↗
+                      </a>
+
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        Backend GitHub ↗
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card project-slide">
+                  <div class="project-image">
+                    <img
+                      src="images/presentation-app-1.png"
+                      alt="Presentation Practice Mobile Application"
+                    />
+                  </div>
+
+                  <div class="project-content">
+                    <h3>Presentation Practice Mobile Application</h3>
+
+                    <p>
+                      A mobile application that analyzes slide and PDF content
+                      using OCR and AI integration to support presentation
+                      practice.
+                    </p>
+
+                    <div class="project-tags">
+                      <span>Node.js</span>
+                      <span>Express.js</span>
+                      <span>MongoDB</span>
+                      <span>EasyOCR</span>
+                      <span>Ollama API</span>
+                    </div>
+
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/pattrapa/Mobile"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Mobile App ↗
+                      </a>
+
+                      <a
+                        href="https://github.com/pattrapa/Mobile_Backend"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Backend ↗
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card project-slide">
+                  <div class="project-image">
+                    <img
+                      src="images/article-summary-1.png"
+                      alt="AI Article Summarization Website"
+                    />
+                  </div>
+
+                  <div class="project-content">
+                    <h3>AI Article Summarization Website</h3>
+
+                    <p>
+                      A Next.js web application that integrates the Groq API to
+                      generate concise summaries from article content.
+                    </p>
+
+                    <div class="project-tags">
+                      <span>Next.js</span>
+                      <span>TypeScript</span>
+                      <span>Groq API</span>
+                    </div>
+
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/Mxyw242/inshort-complete"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        GitHub ↗
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button
+              class="carousel-button next-button"
+              type="button"
+              aria-label="Next project"
+            >
+              <i class="material-icons">chevron_right</i>
+            </button>
+          </div>
+
+          <div class="carousel-dots">
+            <button class="carousel-dot active" type="button"></button>
+            <button class="carousel-dot" type="button"></button>
+            <button class="carousel-dot" type="button"></button>
+            <button class="carousel-dot" type="button"></button>
+          </div>
         </div>
       </section>
-
-      <div class="projects-grid">
-        <article class="project-card">
-          <!-- Project 1 -->
-          <div class="project-gallery">
-            <img src="images/project1-page1.png" alt="Project 1 dashboard" />
-            <img src="images/project1-page2.png" alt="Project 1 second page" />
-            <img src="images/project1-page3.png" alt="Project 1 third page" />
-          </div>
-          <div class="project-content">
-            <h3>Touchless Computer Control System</h3>
-
-            <p>
-              Control a computer using hand gestures detected through a
-              smartphone camera.
-            </p>
-
-            <div class="project-tags">
-              <span>Flutter</span>
-              <span>Python</span>
-              <span>MediaPipe</span>
-              <span>PyAutoGUI</span>
-            </div>
-
-            <div class="project-links">
-              <a
-                href="https://github.com/Ma-meaww/project-one"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub ↗
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <!-- Project 2 -->
-        </article>
-
-        <article class="project-card">
-          <!-- Project 3 -->
-        </article>
-        <article class="project-card">
-          <!-- Project 4 -->
-        </article>
-      </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
