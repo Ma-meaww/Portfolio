@@ -345,15 +345,89 @@ body {
   overflow: hidden;
 }
 
-.project-image {
-  min-height: 360px;
+.project-gallery {
+  min-width: 0;
+  min-height: 510px;
+
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) 60px;
+
+  background-color: #0b111d;
+  overflow: hidden;
 }
 
-.project-image img {
+.gallery-viewport {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.gallery-track {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  transition: transform 0.35s ease;
+}
+
+.gallery-slide {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+
+  display: block;
+  object-fit: contain;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 8px 10px;
+  background-color: #101725;
+  border-top: 1px solid #2b3342;
+
+  overflow-x: auto;
+}
+
+.gallery-thumbnail {
+  width: 46px;
+  height: 42px;
+  padding: 2px;
+  flex-shrink: 0;
+
+  background-color: transparent;
+  border: 1px solid #2b3342;
+  border-radius: 5px;
+
+  cursor: pointer;
+  opacity: 0.55;
+  overflow: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.gallery-thumbnail img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+
+  object-fit: contain;
+  border-radius: 3px;
+}
+
+.gallery-thumbnail:hover {
+  opacity: 0.85;
+}
+
+.gallery-thumbnail.active {
+  border-color: var(--primary);
+  opacity: 1;
 }
 
 .project-content {
@@ -724,8 +798,12 @@ body {
 }
 
 @media (max-width: 950px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .project-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery {
+    min-height: 460px;
   }
 
   .contact-info {
@@ -791,8 +869,8 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .project-image {
-    min-height: 220px;
+  .project-gallery {
+    min-height: 420px;
   }
 
   .project-content {
@@ -844,6 +922,14 @@ body {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects-carousel {
+    padding: 0 35px;
+  }
+
+  .project-gallery {
+    min-height: 350px;
   }
 
   .contact-content {

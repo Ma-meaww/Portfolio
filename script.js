@@ -45,6 +45,34 @@ dots.forEach((dot, index) => {
 
 updateProjectCarousel();
 
+const projectGalleries = document.querySelectorAll(".project-gallery");
+
+projectGalleries.forEach((gallery) => {
+  const galleryTrack = gallery.querySelector(".gallery-track");
+  const thumbnails = gallery.querySelectorAll(".gallery-thumbnail");
+
+  let currentImage = 0;
+
+  function updateGallery() {
+    if (!galleryTrack) return;
+
+    galleryTrack.style.transform = `translateX(-${currentImage * 100}%)`;
+
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.classList.toggle("active", index === currentImage);
+    });
+  }
+
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      currentImage = index;
+      updateGallery();
+    });
+  });
+
+  updateGallery();
+});
+
 const currentYear = document.querySelector("#current-year");
 
 if (currentYear) {
