@@ -7,6 +7,8 @@ const dots = document.querySelectorAll(".carousel-dot");
 let currentProject = 0;
 
 function updateProjectCarousel() {
+  if (!track) return;
+
   track.style.transform = `translateX(-${currentProject * 100}%)`;
 
   dots.forEach((dot, index) => {
@@ -14,7 +16,7 @@ function updateProjectCarousel() {
   });
 }
 
-nextButton.addEventListener("click", () => {
+nextButton?.addEventListener("click", () => {
   currentProject++;
 
   if (currentProject >= slides.length) {
@@ -24,7 +26,7 @@ nextButton.addEventListener("click", () => {
   updateProjectCarousel();
 });
 
-previousButton.addEventListener("click", () => {
+previousButton?.addEventListener("click", () => {
   currentProject--;
 
   if (currentProject < 0) {
@@ -42,3 +44,20 @@ dots.forEach((dot, index) => {
 });
 
 updateProjectCarousel();
+
+const currentYear = document.querySelector("#current-year");
+
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}
+
+const backToTopButton = document.querySelector(".back-to-top");
+
+backToTopButton?.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
