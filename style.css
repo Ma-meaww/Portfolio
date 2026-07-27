@@ -61,6 +61,12 @@ body {
   white-space: nowrap;
 }
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .hero {
   min-height: calc(50vh - 70px);
   padding: 50px 6%;
@@ -181,12 +187,6 @@ body {
 .about {
   padding: 45px 0;
   background-color: var(--background);
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .navbar {
@@ -481,6 +481,93 @@ body {
   opacity: 1;
 }
 
+.education {
+  padding: 45px 0;
+  background-color: var(--background);
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background-color: var(--card);
+  border: 1px solid #2b3342;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.education-info,
+.coursework {
+  padding: 20px;
+}
+
+.education-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.education-icon {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #2b3342;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.education-icon i {
+  color: var(--primary);
+  font-size: 30px;
+}
+
+.coursework {
+  border-left: 2px solid #2b3342;
+  margin: 20px 0;
+  padding: 0 50px;
+}
+
+.education-info h3,
+.coursework h3 {
+  color: var(--primary);
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.coursework h3 {
+  margin-bottom: 15px;
+}
+
+.education-info p {
+  color: var(--secondary-text);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.coursework ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 25px;
+}
+
+.coursework li {
+  color: var(--secondary-text);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.coursework li::before {
+  content: "•";
+  color: var(--primary);
+  font-size: 20px;
+  margin-right: 8px;
+}
+
 @media (max-width: 1100px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -562,6 +649,38 @@ body {
   .carousel-button {
     width: 36px;
     height: 36px;
+  }
+
+  .education-content {
+    grid-template-columns: 1fr;
+  }
+
+  .education-info {
+    padding: 25px 20px;
+  }
+
+  .coursework {
+    position: relative;
+
+    border-left: none;
+    margin: 0;
+    padding: 30px 20px 25px;
+  }
+
+  .coursework::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 20px;
+    right: 20px;
+
+    height: 1px;
+    background-color: #2b3342;
+  }
+
+  .coursework ul {
+    grid-template-columns: 1fr;
   }
 }
 
