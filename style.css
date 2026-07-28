@@ -920,10 +920,6 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
   .projects-carousel {
     padding: 0 35px;
   }
