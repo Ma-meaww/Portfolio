@@ -5,7 +5,7 @@ and contact information.
 
 ## Live Website
 
-https://kulthira-portfolio.vercel.app
+https://kulthiraportfolio.vercel.app
 
 ## Technologies
 
