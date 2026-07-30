@@ -307,26 +307,29 @@
                       <div>
                         <span>My role</span>
                         <p>
-                          Developed the Flutter application and worked on
-                          gesture interaction between the mobile device and the
-                          PC controller.
+                          Developed the PC-side controller, including the Python
+                          WebSocket server, PyAutoGUI automation, cursor
+                          control, text input, and browser actions for the
+                          ThaiJO workflow.
                         </p>
                       </div>
 
                       <div>
                         <span>Challenge</span>
                         <p>
-                          The cursor moved unintentionally while users changed
-                          from the pointing gesture to another command.
+                          During gesture transitions, cursor movement commands
+                          could still be received, causing the pointer to move
+                          away from the position the user intended to click.
                         </p>
                       </div>
 
                       <div>
                         <span>How I solved it</span>
                         <p>
-                          Improved the gesture-state logic and added movement
-                          locking during gesture transitions to reduce
-                          accidental cursor movement.
+                          Added command-state checks and temporary movement
+                          locking on the PC controller during gesture
+                          transitions, reducing accidental cursor movement
+                          before click and confirmation commands.
                         </p>
                       </div>
                     </div>
@@ -481,9 +484,9 @@
                       <div>
                         <span>My role</span>
                         <p>
-                          Worked on backend APIs, attendance workflows, database
-                          integration, and connecting the face-recognition
-                          service with the main system.
+                          Developed backend APIs and database workflows, then
+                          integrated the frontend with attendance, leave
+                          management, approval, and face-recognition services.
                         </p>
                       </div>
 
@@ -491,17 +494,18 @@
                         <span>Challenge</span>
                         <p>
                           Admin, Supervisor, and Employee users required
-                          different permissions, data access, and attendance
-                          workflows.
+                          different permissions and data access, while
+                          attendance, leave, holiday, and approval records still
+                          needed to remain consistent.
                         </p>
                       </div>
 
                       <div>
                         <span>How I solved it</span>
                         <p>
-                          Separated permissions and services by role, then
-                          connected attendance, leave requests, approvals,
-                          holidays, and reports into one workflow.
+                          Applied role-based access to the APIs and connected
+                          the frontend workflows for attendance, leave requests,
+                          approvals, holidays, and reporting.
                         </p>
                       </div>
                     </div>
@@ -631,27 +635,31 @@
                       <div>
                         <span>My role</span>
                         <p>
-                          Worked on backend APIs, OCR processing, database
-                          integration, and AI-generated presentation feedback.
+                          Developed the backend and database, implemented PDF
+                          upload and slide extraction, integrated OCR, and
+                          connected the AI service for generating Thai
+                          presentation scripts.
                         </p>
                       </div>
 
                       <div>
                         <span>Challenge</span>
                         <p>
-                          The system needed to extract useful content from
-                          uploaded slides and turn it into feedback that users
-                          could understand.
+                          Uploaded slides varied in format and image quality, so
+                          OCR could not always extract complete text, while the
+                          system still needed usable content for generating
+                          presentation scripts.
                         </p>
                       </div>
-                      
+
                       <div>
                         <span>How I solved it</span>
                         <p>
-                          Built an OCR processing flow to extract content from
-                          uploaded slides, organized the extracted text, and
-                          sent it to the AI service to generate structured
-                          presentation feedback.
+                          Split uploaded PDFs into individual slides, applied
+                          OCR to each page, and added a manual-input fallback
+                          when text could not be extracted before sending the
+                          content to the AI with a structured prompt for Thai
+                          script generation.
                         </p>
                       </div>
                     </div>
@@ -765,8 +773,10 @@
                       <div>
                         <span>My role</span>
                         <p>
-                          Developed the web interface and integrated the Groq
-                          API for article summarization.
+                          Independently designed and developed the full
+                          application, including the user interface, article
+                          input flow, Groq API integration, and summary result
+                          display.
                         </p>
                       </div>
 
