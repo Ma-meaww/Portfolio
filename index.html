@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kulthira Portfolio</title>
 
+    <meta
+      name="description"
+      content="Portfolio of Kulthira Thongduang, a Computer Science student building web, AI, and automation applications."
+    />
+
+    <meta property="og:title" content="Kulthira Portfolio" />
+
+    <meta
+      property="og:description"
+      content="Computer Science student focused on web development, AI applications, and automation."
+    />
+
+    <meta property="og:url" content="https://kulthiraportfolio.vercel.app" />
+
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="style.css" />
 
     <link
@@ -93,7 +109,7 @@
 
       <section id="about" class="about">
         <div class="container">
-          <div class="about-heading">
+          <div class="section-heading">
             <span>01</span>
             <h2>About me</h2>
           </div>
@@ -161,10 +177,10 @@
 
       <section id="skills" class="skills">
         <div class="container">
-          <h2 class="section-title">
-            <span></span>
-            Skills &amp; Technologies
-          </h2>
+          <div class="section-heading">
+            <span>02</span>
+            <h2>Skills &amp; Technologies</h2>
+          </div>
 
           <div class="skills-list">
             <div class="skill-row">
@@ -197,10 +213,10 @@
 
       <section id="projects" class="projects">
         <div class="container">
-          <h2 class="section-title">
-            <span></span>
-            Featured Projects
-          </h2>
+          <div class="section-heading">
+            <span>03</span>
+            <h2>Featured Projects</h2>
+          </div>
 
           <div class="projects-carousel">
             <button
@@ -449,19 +465,51 @@
                   </div>
 
                   <div class="project-content">
+                    <p class="project-kicker">
+                      02 · Full-stack Web Application
+                    </p>
+
                     <h3>Attendance Management System</h3>
 
-                    <p>
-                      A role-based attendance system with face recognition,
-                      check-in and check-out, leave management, and reporting
-                      for Admin, Supervisor, and Employee roles.
+                    <p class="project-summary">
+                      A role-based attendance platform with face registration,
+                      check-in and check-out, leave requests, approval
+                      workflows, and attendance reports.
                     </p>
+
+                    <div class="project-story">
+                      <div>
+                        <span>My role</span>
+                        <p>
+                          Worked on backend APIs, attendance workflows, database
+                          integration, and connecting the face-recognition
+                          service with the main system.
+                        </p>
+                      </div>
+
+                      <div>
+                        <span>Challenge</span>
+                        <p>
+                          Admin, Supervisor, and Employee users required
+                          different permissions, data access, and attendance
+                          workflows.
+                        </p>
+                      </div>
+
+                      <div>
+                        <span>How I solved it</span>
+                        <p>
+                          Separated permissions and services by role, then
+                          connected attendance, leave requests, approvals,
+                          holidays, and reports into one workflow.
+                        </p>
+                      </div>
+                    </div>
 
                     <div class="project-tags">
                       <span>React</span>
                       <span>TypeScript</span>
                       <span>Node.js</span>
-                      <span>Express.js</span>
                       <span>MySQL</span>
                       <span>Python</span>
                     </div>
@@ -575,6 +623,25 @@
                       practice.
                     </p>
 
+                    <div class="project-story project-story-compact">
+                      <div>
+                        <span>My role</span>
+                        <p>
+                          Worked on backend APIs, OCR processing, database
+                          integration, and AI-generated presentation feedback.
+                        </p>
+                      </div>
+
+                      <div>
+                        <span>Challenge</span>
+                        <p>
+                          The system needed to extract useful content from
+                          uploaded slides and turn it into feedback that users
+                          could understand.
+                        </p>
+                      </div>
+                    </div>
+
                     <div class="project-tags">
                       <span>Node.js</span>
                       <span>Express.js</span>
@@ -678,6 +745,24 @@
                       generate concise summaries from article content.
                     </p>
 
+                    <div class="project-story project-story-compact">
+                      <div>
+                        <span>My role</span>
+                        <p>
+                          Developed the web interface and integrated the Groq
+                          API for article summarization.
+                        </p>
+                      </div>
+
+                      <div>
+                        <span>What I learned</span>
+                        <p>
+                          Learned how prompt structure and input handling affect
+                          the quality and consistency of generated summaries.
+                        </p>
+                      </div>
+                    </div>
+
                     <div class="project-tags">
                       <span>Next.js</span>
                       <span>TypeScript</span>
@@ -716,20 +801,39 @@
           </div>
 
           <div class="carousel-dots">
-            <button class="carousel-dot active" type="button"></button>
-            <button class="carousel-dot" type="button"></button>
-            <button class="carousel-dot" type="button"></button>
-            <button class="carousel-dot" type="button"></button>
+            <button
+              class="carousel-dot active"
+              type="button"
+              aria-label="View Touchless Computer Control project"
+            ></button>
+
+            <button
+              class="carousel-dot"
+              type="button"
+              aria-label="View Attendance Management project"
+            ></button>
+
+            <button
+              class="carousel-dot"
+              type="button"
+              aria-label="View Presentation Practice project"
+            ></button>
+
+            <button
+              class="carousel-dot"
+              type="button"
+              aria-label="View AI Article Summarization project"
+            ></button>
           </div>
         </div>
       </section>
 
       <section id="education" class="education">
         <div class="container">
-          <h2 class="section-title">
-            <span></span>
-            Education
-          </h2>
+          <div class="section-heading">
+            <span>04</span>
+            <h2>Education</h2>
+          </div>
 
           <div class="education-content">
             <div class="education-info">
@@ -760,10 +864,10 @@
 
       <section id="contact" class="contact">
         <div class="container">
-          <h2 class="section-title">
-            <span></span>
-            Contact
-          </h2>
+          <div class="section-heading">
+            <span>05</span>
+            <h2>Contact</h2>
+          </div>
 
           <div class="contact-content">
             <div class="contact-info">
