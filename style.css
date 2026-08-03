@@ -17,16 +17,27 @@ body {
 }
 
 :root {
-  --background: #0c121e;
-  --card: #171e28;
-  --text: #f8fafc;
-  --secondary-text: #94a3b8;
-  --primary: #2472eb;
+  --background: #101011;
+  --nav: #0a0a0b;
+
+  --card: #18181a;
+  --surface: #222225;
+  --gallery: #0d0d0e;
+
+  --text: #f4f4f2;
+  --secondary-text: #b5b5b2;
+  --muted: #858589;
+
+  --primary: #d4d4d0;
+  --primary-hover: #ffffff;
+  --primary-soft: rgb(212 212 208 / 10%);
+
+  --border: #343438;
 }
 
 .navbar {
   width: 100%;
-  background: #080e19;
+  background: var(--nav);
   padding: 20px;
   padding-left: 40px;
   flex-wrap: wrap;
@@ -74,7 +85,7 @@ body {
   align-items: center;
 
   background-color: var(--background);
-  border-bottom: 1px solid #232b38;
+  border-bottom: 1px solid var(--border);
 }
 
 .hero-container {
@@ -133,7 +144,7 @@ body {
   align-items: center;
   gap: 14px;
 
-  color: #ffffff;
+  color: #111111;
   background-color: var(--primary);
   border: 1px solid var(--primary);
   border-radius: 3px;
@@ -152,7 +163,8 @@ body {
 }
 
 .primary-link:hover {
-  background-color: #1f65cf;
+  color: #000000;
+  background-color: var(--primary-hover);
   transform: translateY(-2px);
 }
 
@@ -160,7 +172,7 @@ body {
   padding-bottom: 3px;
 
   color: var(--secondary-text);
-  border-bottom: 1px solid #465166;
+  border-bottom: 1px solid var(--muted);
 
   font-size: 13px;
   text-decoration: none;
@@ -180,14 +192,14 @@ body {
   gap: 25px;
 
   padding-left: 25px;
-  border-left: 1px solid #2b3342;
+  border-left: 1px solid var(--border);
 }
 
 .hero-meta span {
   display: block;
   margin-bottom: 5px;
 
-  color: #8290a6;
+  color: var(--muted);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -255,7 +267,7 @@ body {
   object-fit: cover;
   object-position: center top;
 
-  border: 1px solid #2b3342;
+  border: 1px solid var(--border);
   border-radius: 4px;
 }
 
@@ -303,13 +315,13 @@ body {
 
 .about-principles {
   padding-left: 28px;
-  border-left: 1px solid #2b3342;
+  border-left: 1px solid var(--border);
 }
 
 .about-principles-title {
   margin-bottom: 14px;
 
-  color: #8290a6;
+  color: var(--muted);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -322,7 +334,7 @@ body {
   gap: 10px;
 
   padding: 17px 0;
-  border-top: 1px solid #2b3342;
+  border-top: 1px solid var(--border);
 }
 
 .about-principle span {
@@ -338,7 +350,7 @@ body {
 }
 
 .skills-list {
-  border-top: 1px solid #2b3342;
+  border-top: 1px solid var(--border);
 }
 
 .skill-row {
@@ -350,7 +362,7 @@ body {
   align-items: center;
   gap: 30px;
 
-  border-bottom: 1px solid #2b3342;
+  border-bottom: 1px solid var(--border);
 
   transition:
     padding-left 0.2s ease,
@@ -402,7 +414,7 @@ body {
   grid-template-columns: 1.2fr 1fr;
 
   background-color: var(--card);
-  border: 1px solid #2b3342;
+  border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -414,7 +426,7 @@ body {
   display: grid;
   grid-template-rows: minmax(0, 1fr) 60px;
 
-  background-color: #0b111d;
+  background-color: var(--gallery);
   overflow: hidden;
 }
 
@@ -455,8 +467,8 @@ img.gallery-slide {
   justify-content: center;
 
   background:
-    radial-gradient(circle at center, rgb(36 114 235 / 10%), transparent 55%),
-    #0b111d;
+    radial-gradient(circle at center, var(--primary-soft), transparent 55%),
+    var(--gallery);
 }
 
 /* กรอบโทรศัพท์ */
@@ -467,7 +479,7 @@ img.gallery-slide {
   padding: 7px;
 
   background-color: #05070b;
-  border: 1px solid #394255;
+  border: 1px solid var(--border);
   border-radius: 25px;
 
   box-shadow:
@@ -507,8 +519,8 @@ img.gallery-slide {
   gap: 8px;
 
   padding: 8px 10px;
-  background-color: #101725;
-  border-top: 1px solid #2b3342;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
 
   overflow-x: auto;
 }
@@ -520,7 +532,7 @@ img.gallery-slide {
   flex-shrink: 0;
 
   background-color: transparent;
-  border: 1px solid #2b3342;
+  border: 1px solid var(--border);
   border-radius: 5px;
 
   cursor: pointer;
@@ -596,14 +608,14 @@ img.gallery-slide {
 
 .project-story > div {
   padding-top: 12px;
-  border-top: 1px solid #2b3342;
+  border-top: 1px solid var(--border);
 }
 
 .project-story span {
   display: block;
   margin-bottom: 5px;
 
-  color: #718096;
+  color: var(--muted);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -634,8 +646,8 @@ img.gallery-slide {
 .project-tags span {
   padding: 6px 10px;
   color: var(--secondary-text);
-  background-color: #151e2d;
-  border: 1px solid #263248;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 5px;
   font-size: 12px;
   white-space: nowrap;
@@ -651,8 +663,9 @@ img.gallery-slide {
 .project-links a {
   padding: 9px 13px;
 
-  color: var(--primary);
-  border: 1px solid var(--primary);
+  color: var(--text);
+  border: 1px solid var(--border);
+  background-color: transparent;
   border-radius: 6px;
 
   text-decoration: none;
@@ -660,8 +673,10 @@ img.gallery-slide {
 }
 
 .project-links a:hover {
-  color: var(--text);
-  background-color: var(--primary);
+  color: #111111;
+  background-color: var(--text);
+  border-color: var(--text);
+  transform: translateY(-2px);
 }
 
 .carousel-button {
@@ -677,8 +692,8 @@ img.gallery-slide {
   justify-content: center;
 
   color: var(--text);
-  background-color: #151e2d;
-  border: 1px solid #2b3342;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 50%;
 
   cursor: pointer;
@@ -738,7 +753,7 @@ img.gallery-slide {
   grid-template-columns: 1fr 1fr;
 
   background-color: var(--card);
-  border: 1px solid #2b3342;
+  border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -757,7 +772,7 @@ img.gallery-slide {
 .education-icon {
   width: 60px;
   height: 60px;
-  border: 1px solid #2b3342;
+  border: 1px solid var(--border);
   border-radius: 50%;
 
   display: flex;
@@ -772,7 +787,7 @@ img.gallery-slide {
 }
 
 .coursework {
-  border-left: 2px solid #2b3342;
+  border-left: 2px solid var(--border);
   margin: 20px 0;
   padding: 0 50px;
 }
@@ -831,7 +846,7 @@ img.gallery-slide {
   gap: 14px;
 
   background-color: var(--card);
-  border: 1px solid #2b3342;
+  border: 1px solid var(--border);
   border-radius: 8px;
 }
 
@@ -878,7 +893,7 @@ img.gallery-slide {
 
   color: var(--text);
   background-color: var(--card);
-  border: 1px solid #2b3342;
+  border: 1px solid var(--border);
   border-radius: 8px;
 
   text-align: center;
@@ -919,8 +934,8 @@ img.gallery-slide {
 .footer {
   margin-top: 45px;
   padding: 20px 0;
-  background-color: #080e19;
-  border-top: 1px solid #2b3342;
+  background-color: var(--nav);
+  border-top: 1px solid var(--border);
 }
 
 .footer-content {
@@ -951,7 +966,7 @@ img.gallery-slide {
 
   color: var(--primary);
   background-color: var(--card);
-  border: 1px solid #2b3342;
+  border: 1px solid var(--border);
   border-radius: 6px;
   text-decoration: none;
 }
@@ -1035,7 +1050,7 @@ img.gallery-slide {
     padding-top: 25px;
 
     border-left: none;
-    border-top: 1px solid #2b3342;
+    border-top: 1px solid var(--border);
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1082,7 +1097,7 @@ img.gallery-slide {
     padding-top: 25px;
 
     border-left: none;
-    border-top: 1px solid #2b3342;
+    border-top: 1px solid var(--border);
   }
 }
 
@@ -1145,7 +1160,7 @@ img.gallery-slide {
     right: 20px;
 
     height: 1px;
-    background-color: #2b3342;
+    background-color: var(--border);
   }
 
   .coursework ul {
@@ -1196,7 +1211,7 @@ img.gallery-slide {
 
   .about-principle {
     padding: 15px 0;
-    border-top: 1px solid #2b3342;
+    border-top: 1px solid var(--border);
   }
 
   .skill-row {
